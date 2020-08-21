@@ -46,4 +46,32 @@ header {
     color:orange;
 }
 
+.home {
+    
+    color: white;
+    height: fit-content;
+    
+}
+
+.home #headshot-container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.home #headshot-container #headshot {
+    max-height: 350px;
+}
+
+.home #bio-container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+
+}
+
+.home #bio-container #bio-text {
+    
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
