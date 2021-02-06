@@ -154,6 +154,7 @@ a.anchor {
 }
 
 .projects-header {
+  margin-top: 3em;
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-family: var(--font-family--secondary);
