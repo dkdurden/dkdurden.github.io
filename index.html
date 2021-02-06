@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utilities.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Dustin Durden</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <header id="navbar" class="navbar">
+      <nav>
+        <ul class="nav-list flex">
+          <li class="nav-item">
+            <a class="nav-link" href="#welcome-anchor">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects-anchor">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Welcome Section -->
+
+    <a class="anchor" id="welcome-anchor"></a>
+    <section id="welcome-section" class="welcome">
+      <div class="welcome-picture">
+        <img src="headshot.png" alt="Headshot" />
+      </div>
+      <div class="welcome-text">
+        <div class="flex">
+          <h1 class="text-secondary font-secondary">
+            Hello, my name is Dustin
+          </h1>
+          <div class="text-wrapper flex">
+            <p class="text-primary">I am...</p>
+            <p class="text-primary m-1">a front-end dev by day,</p>
+            <p class="text-primary m-1 mb-2">
+              an aspiring full-stack dev by night
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+
+    <a class="anchor" id="projects-anchor"></a>
+    <section id="projects">
+      <h1 class="projects-header text-center text-secondary mb-5">
+        Here is some of my work...
+      </h1>
+
+      <article class="projects-section">
+        <h2>Small Projects</h2>
+        <p>
+          These are some small projects that I have worked on while learning, as
+          well as some freeCodeCamp course projects
+        </p>
+
+        <div class="projects grid">
+          <article class="card project-tile">
+            <a href="https://codepen.io/dkdurden/full/bGwBgYR">
+              <img src="tribute_page.PNG" alt="" />
+              <h3>Tribute Page</h3></a
+            >
+          </article>
+          <article class="card project-tile">
+            <a href="https://codepen.io/dkdurden/full/wvzjRVm"
+              ><img src="product_page.PNG" alt="" />
+              <h3>Product Page</h3></a
+            >
+          </article>
+          <article class="card project-tile">
+            <a href="https://codepen.io/dkdurden/full/VwKVgdo">
+              <img src="tech_doc.PNG" alt="" />
+              <h3>Technical Documentation Page</h3></a
+            >
+          </article>
+          <article class="card project-tile">
+            <a href="https://codepen.io/dkdurden/full/eYBYpyq">
+              <img src="microsoft_clone.png" alt="" />
+              <h3>Microsoft Home Page Clone</h3></a
+            >
+          </article>
+        </div>
+        <a href="https://codepen.io/dkdurden">
+          <button class="btn">Check out my CodePen</button></a
+        >
+      </article>
+
+      <article class="projects-section">
+        <h2 class="mt-5">School Projects</h2>
+        <p>
+          These are some projects I have worked on with a small team while in
+          school
+        </p>
+
+        <div class="projects grid">
+          <article class="card project-tile">
+            <img src="backpacking.png" alt="" />
+            <div class="project-info">
+              <h3>Backpacking</h3>
+              <p>A 2D game made with Unity</p>
+            </div>
+          </article>
+          <article class="card project-tile">
+            <img src="seedtime.png" alt="" />
+            <div class="project-info">
+              <h3>Mock E-commerce React App</h3>
+              <p>MERN Stack</p>
+            </div>
+          </article>
+        </div>
+      </article>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section class="contact" id="contact">
+      <div class="flex">
+        <h1 class="mb-3">Send me an email</h1>
+        <div class="email flex">
+          <input class="mx-2" type="text" />
+          <button class="mx-2 btn">Send</button>
+        </div>
+      </div>
+      <ul class="flex">
+        <li>
+          <i class="fab fa-linkedin fa-2x"></i>
+          <a href="">LinkedIn</a>
+        </li>
+        <li>
+          <i class="fab fa-codepen fa-2x"></i>
+          <a href="https://codepen.io/dkdurden">CodePen</a>
+        </li>
+        <li>
+          <i class="fab fa-github-square fa-2x"></i>
+          <a href="">GitHub</a>
+        </li>
+      </ul>
+      <p class="text-secondary text-center text-lg">Thanks for stopping by!</p>
+    </section>
+  </body>
+</html>

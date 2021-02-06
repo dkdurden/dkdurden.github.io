@@ -1,0 +1,577 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+  --font-size--small: 1.4rem; /* 14px */
+  --font-size--default: 1.6rem; /* 16px */
+  --font-size--large: 2.4rem; /* 24px */
+  --font-family--primary: "Open Sans", Arial, Helvetica, sans-serif;
+  --font-family--secondary: "Oswald", Arial, Helvetica, sans-serif;
+  --primary-color: #fa4616;
+  --secondary-color: #0021a5;
+  --dark-color: #b1b3b6;
+}
+
+body {
+  font-family: var(--font-family--primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utility */
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -75px;
+  visibility: hidden;
+}
+
+/* Navbar */
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fa4616;
+  font-size: var(--font-size--default);
+  height: 75px;
+  width: 100%;
+}
+
+.navbar nav {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 750px;
+}
+
+.nav-list.flex {
+  justify-content: space-around;
+}
+
+.nav-item {
+  list-style-type: none;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s ease-out;
+}
+
+/* Welcome */
+
+.welcome {
+  margin: 75px auto 0 auto;
+  height: 100vh;
+  width: 80%;
+  max-width: 650px;
+  font-size: var(--font-size--default);
+}
+
+.welcome-picture {
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+.welcome-picture img {
+  border-radius: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: auto;
+  width: 100%;
+  max-width: 350px;
+}
+
+.welcome-text {
+  text-align: center;
+}
+
+.welcome-text .flex {
+  flex-direction: column;
+}
+
+.welcome-text h1 {
+  margin-bottom: 2.5em;
+  font-size: 2em;
+  animation: slideInFromLeft 0.5s ease-in;
+}
+
+.text-wrapper {
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation: slideInFromRight 0.5s ease-in;
+}
+
+.text-wrapper p {
+  color: #ffffff;
+  font-size: 1.3em;
+  opacity: 0%;
+}
+
+.welcome-text p:first-child {
+  align-self: flex-start;
+  margin: 1em 0 0 1em;
+  animation: fadeIn 0.5s ease-in;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.welcome-text p:nth-child(2) {
+  animation: fadeIn 0.5s ease-in;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.welcome-text p:nth-child(3) {
+  animation: fadeIn 0.5s ease-in;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+/* Work Section */
+
+#projects {
+  font-size: var(--font-size--default);
+  position: relative;
+}
+
+.projects-header {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-family: var(--font-family--secondary);
+  font-size: 2em;
+}
+
+.projects-section:nth-of-type(2) {
+  margin-top: 10em;
+}
+
+.projects-section > h2 {
+  margin: 1em 1em 0.5em 1em;
+  padding: 0.3em;
+  font-size: 1.5em;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 10px;
+}
+
+.projects-section > h2,
+.projects-section p {
+  text-align: center;
+}
+
+.projects-section p {
+  margin: 0 1em;
+  padding: 0.5em;
+  font-size: 1em;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.projects-section button {
+  margin-top: 3em;
+}
+
+.projects {
+  margin: 2em 0;
+}
+
+.projects.grid {
+  justify-items: center;
+  align-items: start;
+}
+
+.project-tile {
+  margin: 1em;
+  max-width: 500px;
+}
+
+.project-tile:hover {
+  transform: scale(1.05);
+}
+
+.project-tile p {
+  margin: 0;
+  border-radius: 0;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.project-tile img {
+  padding: 0.5em 0.5em 0 0.5em;
+  height: auto;
+  width: 100%;
+  max-width: 500px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.project-tile h3 {
+  padding: 0.5em 0 0.5em 0;
+  text-align: center;
+  background-color: var(--secondary-color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  font-size: 1.3em;
+}
+
+.project-info {
+  background-color: var(--secondary-color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.project-info p {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Contact Section */
+
+.contact {
+  height: 50vh;
+  font-size: var(--font-size--default);
+  margin-bottom: 10rem;
+}
+
+.contact .flex {
+  height: auto;
+  flex-direction: column;
+}
+
+.contact ul.flex {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contact h1 {
+  margin-top: 2em;
+  font-size: 2em;
+  font-family: var(--font-family--secondary);
+  color: var(--secondary-color);
+}
+
+.email.flex {
+  flex-direction: row;
+}
+
+.email input,
+.email button {
+  padding: 0.5em;
+}
+
+.email button {
+  padding: 0.5em;
+}
+
+.contact ul {
+  margin: 5em 0;
+}
+
+.contact ul li {
+  list-style-type: none;
+  margin: 1em 1.5em;
+  padding: 1em;
+  flex: 1 1 0;
+  max-width: 150px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+  text-align: center;
+}
+
+.contact ul li:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 4px 8px 0px,
+    rgba(60, 64, 67, 0.15) 0px 4px 12px 4px;
+}
+
+.contact ul li i {
+  display: block;
+  margin-bottom: 0.3em;
+  padding: 0.2em;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.contact ul li:first-child i {
+  color: #2867b2;
+}
+
+.contact ul li:nth-child(2) i {
+  color: black;
+}
+
+.contact ul li:nth-child(3) i {
+  color: #24292e;
+}
+
+.contact ul li a {
+  margin-top: 1em;
+  padding: 0.5em;
+  font-size: 1.3em;
+  color: var(--secondary-color);
+}
+
+.contact p {
+  padding-bottom: 3em;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: opacity(0%);
+  }
+
+  100% {
+    transform: opacity(100%);
+  }
+}
+
+/* Media Queries */
+
+/* Small devices (landscape phones, 560px and up) */
+@media (min-width: 560px) {
+  /* Fonts */
+  .nav-link {
+    font-size: 1.7em;
+  }
+
+  .welcome h1,
+  .projects-header,
+  .contact * h1 {
+    font-size: 2.5em;
+  }
+
+  .projects-section h2 {
+    font-size: 1.5em;
+  }
+
+  .projects-section p,
+  .projects-section button {
+    font-size: 1.3em;
+  }
+
+  .project-tile h3 {
+    font-size: 1.5em;
+  }
+
+  .email input {
+    padding: 0.5em;
+    font-size: 1.2em;
+  }
+
+  .email button {
+    font-size: 1.2em !important;
+  }
+
+  /* Work Section */
+
+  .project-tile {
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Fonts */
+
+  .text-wrapper p {
+    font-size: 1.5em;
+  }
+
+  .contact ul li i {
+    font-size: 2.5em;
+  }
+
+  /* Work Section */
+
+  .projects-section {
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+
+  .projects.grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-tile {
+    margin: 0.5em;
+    width: auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Fonts */
+
+  .welcome h1,
+  .projects-header,
+  .contact * h1 {
+    font-size: 3em;
+  }
+
+  .projects-section h2 {
+    font-size: 2em;
+  }
+
+  .projects-section p,
+  .projects-section button {
+    font-size: 1.5em;
+  }
+
+  .project-tile h3 {
+    font-size: 1.8em;
+  }
+
+  .contact ul li i {
+    font-size: 3em;
+  }
+
+  .contact ul li a {
+    font-size: 1.8em;
+    padding: 0;
+  }
+
+  .contact p {
+    font-size: 2em;
+  }
+
+  .email input {
+    padding: 1em;
+    width: 30vw;
+    font-size: 1.3em;
+  }
+
+  .email button {
+    font-size: 1.5em !important;
+  }
+
+  /* Work Section */
+  .project-tile {
+    width: 90%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Fonts */
+
+  .nav-link {
+    font-size: 2em;
+  }
+
+  .welcome h1,
+  .projects-header,
+  .contact * h1 {
+    font-size: 3.5em;
+  }
+
+  /* Welcome Section */
+  .welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin: 75px auto 0 auto;
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  .welcome-picture {
+    align-self: center;
+    animation: slideInFromLeft 0.5s ease-in;
+  }
+
+  .welcome-text h1 {
+    animation: slideInFromRight 0.5s ease-in;
+  }
+
+  .welcome-text {
+    justify-self: stretch;
+    margin: 0 2em;
+  }
+
+  .text-wrapper.flex {
+    height: auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  /* Fonts */
+  .project-tile h3 {
+    font-size: 1.3em;
+  }
+  /* Work Section */
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+  }
+
+  .projects-header {
+    grid-column: 1 / span 2;
+  }
+
+  .projects-section {
+    max-width: 900px;
+  }
+
+  .projects-section > h2 {
+    margin-top: 0 !important;
+  }
+
+  .projects-section p {
+    font-size: 1.3em;
+  }
+
+  .projects-section:nth-of-type(2) {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .project-tile p {
+    font-size: 1.2em;
+  }
+}
